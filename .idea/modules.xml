@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaEvaluation.iml" filepath="$PROJECT_DIR$/.idea/JavaEvaluation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chap01-literal-and-variable.iml" filepath="$PROJECT_DIR$/chap01-literal-and-variable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chap01-literal-and-variable.main.iml" filepath="$PROJECT_DIR$/.idea/modules/chap01-literal-and-variable.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chap01-literal-and-variable.test.iml" filepath="$PROJECT_DIR$/.idea/modules/chap01-literal-and-variable.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chap03-method-and-api-practice-quiestion.iml" filepath="$PROJECT_DIR$/chap03-method-and-api-practice-quiestion.iml" />
     </modules>
   </component>
 </project>
