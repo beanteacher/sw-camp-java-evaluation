@@ -24,6 +24,15 @@
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/chap04-control-flow" />
         <option name="gradleHome" value="" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/chap04-control-flow" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/chap05-array" />
+        <option name="gradleHome" value="" />
       </GradleProjectSettings>
     </option>
   </component>
