@@ -46,6 +46,11 @@ public class StudentDTO {
 
     public void setKor(int kor) {
         this.kor = kor;
+
+        if(kor > 100 || kor < 0) {
+            System.out.println("점수는 0점과 100점 사이의 수 입니다. 이외의 값 입력하여 국어 점수는 0점입니다.");
+            this.kor = 0;
+        }
     }
 
     public int getKor() {
@@ -54,6 +59,11 @@ public class StudentDTO {
 
     public void setEng(int eng) {
         this.eng = eng;
+
+        if(eng > 100 || eng < 0) {
+            System.out.println("점수는 0점과 100점 사이의 수 입니다. 이외의 값 입력하여 영어 점수는 0점입니다.");
+            this.eng = 0;
+        }
     }
 
     public int getEng() {
@@ -62,25 +72,25 @@ public class StudentDTO {
 
     public void setMath(int math) {
         this.math = math;
+
+        if(math > 100 || math < 0) {
+            System.out.println("점수는 0점과 100점 사이의 수 입니다. 이외의 값 입력하여 수학 점수는 0점입니다.");
+            this.math = 0;
+        }
     }
 
     public int getMath() {
         return this.math;
     }
 
-    public String getInformation(StudentDTO[] students) {
-        StringBuilder result = new StringBuilder();
+    public String getInformation(StudentDTO student) {
 
-        for(int i = 0; i < students.length; i++) {
-            result.append("학년="+students[i].grade+", "+
-                    "반="+students[i].classroom+", "+
-                    "이름="+students[i].name+", "+
-                    "국어="+students[i].kor+", "+
-                    "영어="+students[i].eng+", "+
-                    "수학="+students[i].math+", "+
-                    "평균="+(students[i].kor+students[i].eng+students[i].math)/3);
-            result.append("\r\n");
-        }
-        return result.toString();
+        return "학년="+student.grade+", "+
+                    "반="+student.classroom+", "+
+                    "이름="+student.name+", "+
+                    "국어="+student.kor+", "+
+                    "영어="+student.eng+", "+
+                    "수학="+student.math+", "+
+                    "평균="+(student.kor+student.eng+student.math)/3;
     }
 }
