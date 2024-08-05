@@ -5,6 +5,8 @@
     <file type="web" url="file://$PROJECT_DIR$/chap01-literal-and-variable" />
     <file type="web" url="file://$PROJECT_DIR$/chap03-method-and-api-practice-quiestion" />
     <file type="web" url="file://$PROJECT_DIR$/chap04-control-flow" />
+    <file type="web" url="file://$PROJECT_DIR$/chap05-array" />
+    <file type="web" url="file://$PROJECT_DIR$/chap06-class-and-object" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="temurin-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
