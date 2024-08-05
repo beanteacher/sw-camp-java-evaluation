@@ -10,6 +10,7 @@ public class StudentDTO {
     private int math;
 
     public StudentDTO() {}
+
     public StudentDTO(int grade, int classroom, String name, int kor, int eng, int math) {
         this.grade = grade;
         this.classroom = classroom;
@@ -68,14 +69,18 @@ public class StudentDTO {
     }
 
     public String getInformation(StudentDTO[] students) {
+        StringBuilder result = new StringBuilder();
+
         for(int i = 0; i < students.length; i++) {
-            System.out.println("학년="+students[i].grade+", "+
+            result.append("학년="+students[i].grade+", "+
                     "반="+students[i].classroom+", "+
                     "이름="+students[i].name+", "+
                     "국어="+students[i].kor+", "+
                     "영어="+students[i].eng+", "+
                     "수학="+students[i].math+", "+
                     "평균="+(students[i].kor+students[i].eng+students[i].math)/3);
+            result.append("\r\n");
         }
+        return result.toString();
     }
 }
