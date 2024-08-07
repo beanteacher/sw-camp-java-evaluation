@@ -3,9 +3,7 @@ package com.ohgiraffers.level01.basic;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
 public class Application2 {
     public static void main(String[] args) throws IOException {
@@ -22,25 +20,38 @@ public class Application2 {
          * 가장 빈도 높은 단어 : hello (2 번)
          */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 
         String input = br.readLine().toLowerCase().replaceAll("[^a-z\\s]", "");
         String[] inputArr = input.split(" ");
-        String maxCountInput = "";
-        int maxCount = 0;
+
+        int[] countArr = new int[inputArr.length];
 
         for(int i = 0; i < inputArr.length; i++) {
-            System.out.println(inputArr[i]);
-            int inputCount = 1;
+            countArr[i] = 1;
             for(int j = 0; j < i; j++) {
                 if(inputArr[i].equals(inputArr[j])) {
-
+                    countArr[j] = countArr[j] + 1;
+                    countArr[i] = countArr[i] - 1;
                 }
             }
-            if(inputCount > maxCount) {
-                maxCount = inputCount;
-                maxCountInput = inputArr[i];
+        }
+
+        int max = 0;
+        String maxStr = "";
+
+        for(int i = 0; i < countArr.length; i++) {
+
+            if(countArr[i] != 0) {
+                if(countArr[i] > max) {
+                    max = countArr[i];
+                    maxStr = inputArr[i];
+                }
+                sb.append(inputArr[i]).append(" : ").append(countArr[i]).append("\r\n");
             }
         }
-        System.out.println("가장 빈도 높은 단어 : " + maxCountInput + "("+maxCount+"번)");
+        sb.append("가장 빈도 높은 단어 : ").append(maxStr).append("(").append(max).append("번)");
+
+        System.out.println(sb);
     }
 }
